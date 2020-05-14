@@ -3,7 +3,8 @@
 
 - `https://github.com/gitwatch/gitwatch`
 - added to file `sudo vim /usr/local/bin/gitwatch` on line 345: `$GIT push origin master`
-
+- `$HOME/.config/systemd/user/gitwatch@.service`: arquivo de configuração do meu serviço
+- `/usr/local/bin/gitwatch `
 ## terminal setting
 
 - make terminal great again.
