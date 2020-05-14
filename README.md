@@ -2,7 +2,7 @@
 ## automatic commit routine
 
 - `https://github.com/gitwatch/gitwatch`
-
+- added to file `sudo vim /usr/local/bin/gitwatch` on line 345: `$GIT push origin master`
 
 ## terminal setting
 
