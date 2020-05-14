@@ -1,8 +1,8 @@
 
-- ##### commit routine
-fires command after file gets saved
+## automatic commit routine
 
-`inotifywait -q -m -e CLOSE_WRITE --format="git commit -m 'autocommit on change' %w" file.txt | sh`
+- `https://github.com/gitwatch/gitwatch`
+
 
 ## terminal setting
 
