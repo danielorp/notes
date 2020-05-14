@@ -11,7 +11,7 @@ fires command after file gets saved
 
 - adds apt package suggestions
     `https://ar.al/2018/07/16/adding-command-not-found-apt-package-suggestions-to-zsh/`
-d
+
 ## docker
 
 - ##### subir docker mysql
