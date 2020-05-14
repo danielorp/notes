@@ -6,7 +6,7 @@ fires command after file gets saved
 
 ## terminal setting
 
-- make terminal great again
+- make terminal great again.
     `https://maxim-danilov.github.io/make-linux-terminal-great-again/`
 
 - adds apt package suggestions
