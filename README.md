@@ -17,3 +17,12 @@
 
 - ##### subir docker mysql
     `docker run --name itaumon-mysql -e MYSQL_ROOT_PASSWORD=123456 --publish 3306:3306 -d mysql:8.0`
+
+
+## ssh
+
+- ##### generates ssh key
+    `ssh-keygen -t rsa -b 2048 <email>`
+
+- ##### copies to the remote server
+    `ssh-copy-id -i ~/.ssh/mykey user@host`
