@@ -10,7 +10,7 @@
 - make terminal great again.
     `https://maxim-danilov.github.io/make-linux-terminal-great-again/`
 
-- adds apt package suggestions
+- adds apt package suggestions to zsh terminal.
     `https://ar.al/2018/07/16/adding-command-not-found-apt-package-suggestions-to-zsh/`
 
 ## docker
