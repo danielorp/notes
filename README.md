@@ -26,3 +26,8 @@
 
 - ##### copies to the remote server
     `ssh-copy-id -i ~/.ssh/mykey user@host`
+
+## mysql com django
+
+- ###### muito ranger de dente ate fazer o django conseguir enxergar o mysql no ubuntu, apesar do db estar num docker.
+    `sudo apt-get install default-libmysqlclient-dev`
