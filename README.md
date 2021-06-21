@@ -1,33 +1,53 @@
-
-## automatic commit routine
-
-- `https://github.com/gitwatch/gitwatch`
-- added to file `sudo vim /usr/local/bin/gitwatch` on line 345: `$GIT push origin master`
-- `$HOME/.config/systemd/user/gitwatch@.service`: arquivo de configuração do meu serviço
-- `/usr/local/bin/gitwatch`: arquivo do script executado em background.
 ## terminal setting.
 
-- make terminal great again.
+- ##### make terminal great again.
     `https://maxim-danilov.github.io/make-linux-terminal-great-again/`
 
-- adds apt package suggestions to zsh terminal.
-    `https://ar.al/2018/07/16/adding-command-not-found-apt-package-suggestions-to-zsh/`
+## docker.
 
-## docker
-
-- ##### subir docker mysql
+- ##### cheatsheet for spinning up a mysql docker.
     `docker run --name itaumon-mysql -e MYSQL_ROOT_PASSWORD=123456 --publish 3306:3306 -d mysql:8.0`
 
 
-## ssh
+## ssh.
 
-- ##### generates ssh key
+- ##### generates ssh key.
     `ssh-keygen -t rsa -b 2048 <email>`
 
-- ##### copies to the remote server
+- ##### copies to the remote server.
     `ssh-copy-id -i ~/.ssh/mykey user@host`
 
-## mysql com django
+## django with mysql.
 
-- ###### muito ranger de dente ate fazer o django conseguir enxergar o mysql no ubuntu, apesar do db estar num docker.
+- ##### in order for mysqlclient to work properly, and connect to a remote mysql server, the library below is required.
     `sudo apt-get install default-libmysqlclient-dev`
+
+## logging.
+
+- ##### centralize logs distributed across several machines using native rsyslog.
+    `thegeekdiary.com/configuring-remote-logging-using-rsyslog-in-centos-rhel/#:~:text=To%20configure%20a%20machine%20to,address%20with%20a%20single%20%40%20sign.`
+
+- ##### enable to receive messages over UDP.
+
+    `$ModLoad imudp.so`
+   	`$UDPServerRun 514`
+
+- ##### defining a folder that stores log files by facility.
+
+    `$template DynamicFile,"/var/log/loghost/%HOSTNAME%/%syslogfacility-text%.log"`
+    `*.*    -?DynamicFile`
+
+- ##### it may be necessary to add some firewall rules so the logging server can receive events from clients.
+
+    `firewall-cmd --add-port=514/udp --permanent`
+    `firewall-cmd --add-port=514/tcp --permanent`
+    `firewall-cmd --reload`
+
+- ##### refer to the centralizing machine, within the client, in the following manner.
+    `*.info @centralizing_servers_ip_here`
+
+- ##### if you want all events to be sent to the centralizing server.
+    `*.* @@centralizing_servers_ip_here`
+
+- ##### set a specific file to be read.
+    `https://www.ibm.com/support/pages/use-rsyslog-monitor-log-file-and-generate-syslog-items`
